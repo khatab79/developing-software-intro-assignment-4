@@ -1,19 +1,53 @@
 # Focus College ACSD Assignment 4
 
-This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.
+This respository is intended for the use of Focus College Students enrolled in the 
+Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.
 
 ---
 
-You can remove everything below the above line once you're ready to edit this file.
 
-## Getting Started
+## Get started 
 
-Please read the [Assignment Requirements](./assignments/readme.md)
+Make sure you have the latest version of node and npm.
 
-## Deadline For Submissions
+```
+node -v
+v10.19.0
+```
+and
+```
+npm -v
+6.14.4
+```
+**_If you do not install any of them, you can not run the application_**
 
-The deadline for this assignment is 5PM on Wednesday September 30th, 2020
++ To install npm & node please, check this link [npm]
 
-## Notes
+---
 
-This is a PUBLIC repository attached to your github account and something that you can demonstrate to potential employers. Take care to ensure professionalism for both you and your team's sake. This will be the first entry into your professional portfolio.
+
+## Running the Application
+
+
+To **build** the application
+```
+tsc
+```
+To **run** the application using node
+
+```
+node dist/index.js 
+```
+To **build & run** the application using npm
+```
+npm start 
+```
+
+---
+
+
+
+[npm]: https://docs.npmjs.com/cli/install
+
+
+
