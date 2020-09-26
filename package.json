@@ -1,9 +1,13 @@
 {
   "name": "acsd-assignment-4-khatab",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/index.js",
+    "prestart": "tsc",
+    "poststart": "echo \"All done! \" ",    
+    "build":"tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/khatab79/developing-software-intro-assignment-4/issues"
   },
-  "homepage": "https://github.com/khatab79/developing-software-intro-assignment-4#readme"
+  "homepage": "https://github.com/khatab79/developing-software-intro-assignment-4#readme",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
 }
