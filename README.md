@@ -124,7 +124,7 @@ npm run start:dev
 ```
 
 - This script will run:
-  - `npm run build:lint:fix`
+  - `npm run build:lint`
   - `npm run start`
 ---
 

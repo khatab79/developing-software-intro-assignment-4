@@ -1,6 +1,6 @@
 {
   "name": "acsd-assignment-4-khatab",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.",
   "main": "index.js",
   "scripts": {
@@ -12,9 +12,9 @@
     "start:dev": "npm run start",
     "start:dev:notest": "npm run build:compile && npm run start",
 
-    "build": "npm run build:lint:fix && npm run build:compile",
+    "build": "npm run build:lint && npm run build:compile",
     "build:compile": "tsc",
-    "build:lint:fix": "eslint src/**/*.ts --ext .ts --fix",
+    "build:lint": "eslint src/**/*.ts --ext .ts --fix",
   
     "test": "echo \"Error: no test specified\" && exit 1"
 
