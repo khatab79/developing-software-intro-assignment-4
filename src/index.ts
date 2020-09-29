@@ -1,8 +1,4 @@
-//basic function to console hello world
-function sayHello(name: string) {
-    console.log(`Hello ${name}`);
-}
+import { hello } from "./hello";
 
-//call sayHello
-const world = "world";
-sayHello(world);
+const message = hello();
+console.log(message);

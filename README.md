@@ -128,7 +128,7 @@ npm run start:dev
   - `npm run start`
 ---
 
-### *2. Adding [prettier] to the project*
+### *3. Adding [prettier] to the project*
 
 #### *_Installation and setup_*
 
@@ -159,7 +159,7 @@ coverge
 ```
 *_add `coverge` to all ignores files in your project_*
 
-* finally update the package.json pritter running.
+* finally update the package.json to let pritter running.
 
 
 
@@ -201,6 +201,96 @@ npm run start:dev
   - `npm run build:lint`
   - `npm run start`
 
+---
+
+### *4. Adding [testing] (mocha and chai) to the project*
+
+#### *_Installation and setup_*
+
+* Run the following commands to setup [testing] in your *TypeScript project*.
+
+```
+npm install chai mocha ts-node @types/chai @types/mocha --save-dev
+```
+
+* add new folder to the project named **tests**
+* add new file **hello.spec.ts** under folder **test**
+* add new file for hello function under **src** 
+* write the following to each files:
+
+1. hello fun
+```
+export const hello = () => "Hello world!";
+```
+
+2. index
+
+```
+import { hello } from "./hello";
+
+const message = hello();
+console.log(message);
+```
+3. hello.spec.ts
+
+```
+import { hello } from "../src/hello";
+import { expect } from "chai";
+import "mocha";
+
+describe("Hello function", () => {
+    it("should return hello world", () => {
+        const result = hello();
+        expect(result).to.equal("Hello world!");
+    });
+});
+
+```
+
+* finally update the package.json to let test running.
+
+
+
+
+---
+
+
+## Running the Application
+
+
+To **build** the application
+```
+tsc
+```
+To **run** the application and only compile (without running [testing], [prettier] and  [ESLint] ) 
+
+```
+npm run start notest
+```
+or
+
+```
+npm run start:dev:notest
+```
+- This script will run:
+  - `npm run build`
+  - `npm run start`
+
+
+
+To **build & run** the application using npm and lint
+
+```
+npm run start:dev
+```
+
+- This script will run:  
+   - `npm run build:test`
+  - `npm run build:prettier`
+  - `npm run build:lint`
+  - `npm run start`
+
+---
 
 
 
@@ -211,6 +301,7 @@ npm run start:dev
 
 [prettier]: https://prettier.io/docs/en/install.html
 
+[testing]: https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
 
 
 
