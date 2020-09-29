@@ -411,6 +411,43 @@ npm run start:dev -- say-hello --name khatab
 
 ---
 
+### *7. Adapting module to the project*
+
+## Running the Application
+
+
+To **build** the application
+```
+tsc
+```
+To **run** the application and only compile (without running [yargs], [nyc] istanbul testing, [prettier] and  [ESLint] ) 
+
+```
+npm run start -- say-hello --name khatab
+```
+or
+```
+npm run start:dev:notest -- say-hello --name khatab
+```
+
+- This script will run:
+  - `npm run build`
+  - `npm run start`
+
+
+
+To **build & run** the application using npm and lint
+
+```
+npm run start:dev -- say-hello --name khatab
+```
+
+- This script will run:  
+  - `npm run build:test`
+  - `npm run build:prettier`
+  - `npm run build:lint`
+  - `npm run start`
+
 
 
 
