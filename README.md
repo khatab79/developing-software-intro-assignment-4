@@ -356,6 +356,63 @@ npm run start:dev
 ---
 
 
+### *6. Adding [yargs] to the project*
+
+#### *_Installation and setup_*
+
+* Run the following commands to setup [yargs] in your *TypeScript project*.
+
+```
+npm i yargs
+
+```
+yargs has type definitions at @types/yargs
+```
+npm i @types/yargs --save-dev
+```
+
+---
+
+
+## Running the Application
+
+
+To **build** the application
+```
+tsc
+```
+To **run** the application and only compile (without running [yargs], [nyc] istanbul testing, [prettier] and  [ESLint] ) 
+
+```
+npm run start -- say-hello --name khatab
+```
+or
+```
+npm run start:dev:notest -- say-hello --name khatab
+```
+
+- This script will run:
+  - `npm run build`
+  - `npm run start`
+
+
+
+To **build & run** the application using npm and lint
+
+```
+npm run start:dev -- say-hello --name khatab
+```
+
+- This script will run:  
+  - `npm run build:test`
+  - `npm run build:prettier`
+  - `npm run build:lint`
+  - `npm run start`
+
+---
+
+
+
 
 
 [npm]: https://docs.npmjs.com/cli/install
@@ -367,6 +424,8 @@ npm run start:dev
 [testing]: https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
 
 [nyc]: https://www.npmjs.com/package/nyc
+
+[yargs]: https://www.npmjs.com/package/yargs
 
 
 
