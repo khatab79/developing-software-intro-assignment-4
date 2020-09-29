@@ -1,33 +1,14 @@
+// import yargs to re-use code from someone else that has already
 import yargs = require("yargs");
 
+//import funtion
+import { sayHi } from "./command/say-hello";
 
-import { argv } from "yargs";
+//to say hello
+sayHi(yargs);
 
-// build interactive command line by using yargs to pass user arguments
-yargs.command(
-    //alice to apply yargs
-    "say-hello",
-
-    //--help flag for user
-    "say hello to any name, take a string variable",
-
-    //yargs parameters
-    {
-        //alice for user parsing
-        name: {
-            type: "string",
-            description: "name to call",
-            alias: "name",
-        },
-    },
-    function (args) {
-    
-        console.log("Hello",argv.name);
-    }
-);
-
-//Have the help flag return help
+// tell yargs to include the --help flag
 yargs.help();
 
-//Parse the arguments.
+// tell yargs to parse the parameters
 yargs.parse();
